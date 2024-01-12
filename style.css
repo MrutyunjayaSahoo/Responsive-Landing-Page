@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy';
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+
+}
+
+.main {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.nav {
+    height: 95px;
+    background-color: rgba(130, 216, 249, 0.326);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4vw;
+    /*top bottom right left and move towards inside of nav  */
+    border-bottom: 2px solid #c2c1c1;
+}
+
+.nav-part2 {
+    display: flex;
+    /* justify-content: space-between;
+    align-items: center; Here space distribute will not work bcz i nav-part2 no space space b/w them*/
+    /*Use gap property to give space */
+    gap: 4vw;
+    align-items: center;
+    cursor: pointer;
+
+
+}
+
+.nav-part2 h4 {
+    transition: all 0.2s ease-in-out;
+}
+
+.nav-part2 h4:hover {
+    background-color: rgba(119, 46, 255, 0.525);
+    border-radius: 8px;
+    padding: 0.4vw .3vw;
+
+}
+
+.nav h2 {
+    font-size: 3vw;
+    font-weight: 700;
+    box-shadow: 2px 2px 5px 2px rgb(60, 60, 60);
+    border-radius: 5px;
+
+}
+
+.nav h4 {
+    font-size: 1.3vw;
+}
+
+.nav i {
+    /* font-size: 1.6vw; */
+    font-weight: 800;
+    display: none;
+
+}
+
+.nav button {
+    font-size: 1.2vw;
+    padding: .6vw 1.2vw;
+    /* background-color:rgb(117, 219, 7); */
+    background-color: rgb(76, 0, 255);
+    color: azure;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.content {
+    /* calc() used to calculate arithmatic calculation */
+
+    height: calc(100% - 100px);
+    /* so that scrollbar will removed */
+    width: 100%;
+    /* background-color:rgb(254, 142, 30); */
+    display: flex;
+    position: relative;
+}
+
+.left {
+    height: 100%;
+    width: 50%;
+    /* background-color: crimson; */
+    padding: 5vw 4vw;
+}
+
+.left h1 {
+    font-size: 4.7vw;
+    line-height: 5vw;
+}
+
+.left h1 span {
+    color: rgb(76, 0, 255);
+    /* color: #F3976A; */
+}
+
+.left p {
+    font-size: 1.3vw;
+    font-weight: 600;
+    color: rgb(2, 94, 130);
+    width: 80%;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+}
+
+.content button {
+    font-size: 1.5vw;
+    padding: 1vw 2vw;
+    /* background-color:rgb(117, 219, 7); */
+    background-color: rgb(76, 0, 255);
+    color: azure;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+
+}
+
+
+.right {
+    height: 100%;
+    width: 50%;
+    /* background-color: rgb(220, 20, 113); */
+
+}
+
+.right img {
+    height: 100%;
+    width: 100%;
+}
+
+/* nav */
+
+@media (max-width:600px) {
+    .nav {
+        /* flex-direction: column; */
+        padding: 0 6vw;
+        /*move towards inside of nav */
+        background-color: rgba(122, 214, 251, 0.457);
+
+    }
+
+    .nav h2 {
+        font-size: 6vw;
+
+    }
+
+    .nav h4 {
+        font-size: 5.1vw;
+        display: none;
+
+    }
+
+    .nav button {
+        display: none;
+    }
+
+    .nav i {
+        display: block;
+        font-size: 6vw;
+    }
+
+    .content {
+        height: calc(100% - 60px);
+        flex-direction: column;
+    }
+
+    .left {
+        width: 100%;
+        height: 63%;
+        padding: 6vw 10vw;
+    }
+
+    .left h1 {
+        font-size: 10.2vw;
+        line-height: 9vw;
+    }
+
+    .left p {
+        font-size: 3.7vw;
+        font-weight: 600;
+        width: 100%;
+        text-align: justify;
+    }
+
+    .right {
+        width: 100%;
+        height: 47%;
+    }
+
+    .content button {
+        font-size: 4vw;
+        padding: 2vw 3vw;
+        border-radius: 10px;
+    }
+
+
+}
+
+@media (max-width:1450px) and (min-width:1085px) {
+    .left p {
+        font-size: 2vw;
+        text-align: justify;
+        color: rgb(2, 94, 130);
+    }
+
+    .nav h4 {
+        font-size: 2.2vw;
+    }
+
+    .nav button {
+        font-size: 2vw;
+        padding: 0.76vw 1.2vw;
+        text-align: center;
+    }
+
+    .content button {
+        font-size: 2vw;
+    }
+}
+
+@media (max-width:1084px) and (min-width:601px) {
+    .left p {
+        font-size: 2vw;
+        text-align: justify;
+        color: rgb(2, 94, 130);
+    }
+
+    .nav h4 {
+        font-size: 2.2vw;
+    }
+
+    .nav button {
+        font-size: 2vw;
+        padding: 0.76vw 1.2vw;
+        text-align: center;
+    }
+
+    .content button {
+        font-size: 2vw;
+    }
+}
